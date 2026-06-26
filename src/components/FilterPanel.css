@@ -1,0 +1,63 @@
+.filter-panel {
+  background: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dark .filter-panel {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.filter-panel h3 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dark .filter-panel h3 {
+  color: var(--text-dark);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-button {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--border-light);
+  background: var(--card-light);
+  color: var(--text-light);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dark .filter-button {
+  border-color: var(--border-dark);
+  background: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.filter-button:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+.filter-button.active {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-hover);
+}

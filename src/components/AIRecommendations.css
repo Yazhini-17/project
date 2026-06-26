@@ -1,0 +1,263 @@
+.ai-recommendations {
+  background: var(--card-light);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.dark .ai-recommendations {
+  background: var(--card-dark);
+  border-color: var(--border-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.ai-recommendations:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ai-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.refresh-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-light);
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark .refresh-btn {
+  background: var(--bg-dark);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+.refresh-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--primary-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.dark .loading-spinner {
+  border-color: var(--border-dark);
+  border-top-color: var(--primary-blue);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ai-loading p {
+  color: var(--text-light);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.dark .ai-loading p {
+  color: var(--text-dark);
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-recommendations {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+.dark .no-recommendations {
+  color: var(--text-dark);
+}
+
+.recommendation-card {
+  background: var(--bg-light);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.dark .recommendation-card {
+  background: var(--bg-dark);
+  border-color: var(--border-dark);
+}
+
+.recommendation-card.priority-high {
+  border-left: 4px solid var(--danger);
+}
+
+.recommendation-card.priority-medium {
+  border-left: 4px solid var(--warning);
+}
+
+.recommendation-card.priority-low {
+  border-left: 4px solid var(--success);
+}
+
+.recommendation-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.type-icon,
+.priority-icon {
+  font-size: 1.25rem;
+}
+
+.confidence-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark .confidence-badge {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.recommendation-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0 0 0.5rem 0;
+}
+
+.dark .recommendation-title {
+  color: var(--text-dark);
+}
+
+.recommendation-description {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.dark .recommendation-description {
+  color: var(--text-dark);
+}
+
+.recommendation-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.dark .recommendation-metrics {
+  border-top-color: var(--border-dark);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-key {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.dark .metric-key {
+  color: var(--text-dark);
+}
+
+.metric-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.dark .metric-value {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .ai-recommendations {
+    padding: 1.25rem;
+  }
+  
+  .ai-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .recommendation-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recommendation-card {
+    padding: 1rem;
+  }
+}
