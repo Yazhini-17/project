@@ -175,7 +175,3 @@ Market Gap Score = Demand Score - Competition Score
 - Historical trend analysis
 - Machine learning for demand prediction
 - Mobile app development
-
-
-## 🎨 Figma Design
-[Click here to view the Figma Design Prototype](https://www.figma.com/make/FH0DdaNly2UM2nzp8aVa4A/Market-Gap-Finder?t=ZFPdq3LQByr392F0-1)
